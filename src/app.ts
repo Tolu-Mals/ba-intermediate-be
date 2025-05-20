@@ -4,6 +4,8 @@ import cors from 'cors';
 import morgan from 'morgan';
 import logger from '@/utils/logger';
 import env from './config/env';
+import ROUTES from '@/constants/routes';
+import v1Api from './api-versions/v1';
 
 const app = express();
 
@@ -30,4 +32,6 @@ app.use(cors());
 //remove default express header
 app.disable('x-powered-by');
 
-export { app };
+app.use(ROUTES.v1Api, v1Api);
+
+export default app;
