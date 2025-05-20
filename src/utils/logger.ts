@@ -7,13 +7,13 @@ const { combine, json, errors, timestamp, splat, colorize, simple } =
   winston.format;
 
 const logFormat = combine(
-  json(), //logs as json is good standard practive
-  errors({ stack: true }), //adds supports for errors including stack trace
-  splat(), //alows you to do interpolation in log messages
   timestamp({
     //adds timestamps to logs
     format: 'YYYY-MM-DD hh:mm:ss.SSS A', // sets format 2022-01-25 03:23:10.350 PM
   }),
+  splat(), //alows you to do interpolation in log messages
+  json(), //logs as json is good standard practive
+  errors({ stack: true }), //adds supports for errors including stack trace
 );
 
 /*
@@ -27,7 +27,7 @@ Log rotation is a process that limits the size of log files by creating new file
 - Aids Troubleshooting: Organizes logs by time periods, making it easier to find relevant information
 */
 const errorRotateFile = new winston.transports.DailyRotateFile({
-  filename: path.join(__dirname, '../logs/error-%DATE%.log'),
+  filename: path.join(__dirname, '../../logs/error-%DATE%.log'),
   datePattern: 'YYYY-MM-DD',
   level: 'error',
   maxSize: '20m',
@@ -40,7 +40,7 @@ const errorRotateFile = new winston.transports.DailyRotateFile({
 });
 
 const combinedRotateFile = new winston.transports.DailyRotateFile({
-  filename: path.join(__dirname, '../logs/combined-%DATE%.log'),
+  filename: path.join(__dirname, '../../logs/combined-%DATE%.log'),
   datePattern: 'YYYY-MM-DD',
   maxSize: '20m',
   maxFiles: '14d',

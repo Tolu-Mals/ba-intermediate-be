@@ -1,5 +1,9 @@
 const ROUTES = {
-  v1Api: 'api/v1',
+  // Versions
+  v1: '/api/v1',
+
+  //healthcheck
+  healthcheck: '/health',
 };
 
 export default ROUTES;
