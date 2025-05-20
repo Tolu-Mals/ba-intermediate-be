@@ -11,10 +11,11 @@ const envSchema = z.object({
   LOG_LEVEL: z
     .enum(['error', 'warn', 'info', 'http', 'verbose', 'debug', 'silly'])
     .default('debug'),
-  //   DATABASE_URL: z
-  //     .string()
-  //     .url({ message: "You need to set DATABASE_URL in your .env file" }),
+  DATABASE_URL: z
+    .string()
+    .url({ message: 'You need to set DATABASE_URL in your .env file' }),
 });
+
 const parsedEnv = envSchema.parse(process.env);
 
 export default parsedEnv;
