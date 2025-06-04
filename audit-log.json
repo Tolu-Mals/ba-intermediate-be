@@ -6,24 +6,14 @@
     "auditLog": "audit-log.json",
     "files": [
         {
-            "date": 1747741023856,
-            "name": "C:\\Users\\malom\\Github\\naija-made-be\\src\\logs\\error-2025-05-20.log",
-            "hash": "479cd9f55ac7eef7a999e341ddca1f61f488e40e90b983c06ca0b10e88f9c723"
+            "date": 1749057322620,
+            "name": "C:\\Users\\malom\\Github\\ba-intermediate-be\\logs\\error-2025-06-04.log",
+            "hash": "9ebdc299432d077629bf094b57f5ad84253460186372a87371957487f65359a0"
         },
         {
-            "date": 1747741023859,
-            "name": "C:\\Users\\malom\\Github\\naija-made-be\\src\\logs\\combined-2025-05-20.log",
-            "hash": "057bd8a8d53b9544a4f7e1822be943dc5f63494e58a9dca8034187c69b38aec8"
-        },
-        {
-            "date": 1747748400648,
-            "name": "C:\\Users\\malom\\Github\\naija-made-be\\logs\\error-2025-05-20.log",
-            "hash": "7128043f3613e94ae5e82f418131d563d69f691faf5615845c31bf077f60e8b9"
-        },
-        {
-            "date": 1747748400651,
-            "name": "C:\\Users\\malom\\Github\\naija-made-be\\logs\\combined-2025-05-20.log",
-            "hash": "0bb2b48604f0d6e24616830b76616e7cd4cf4ba0c4cd385f3783360868cdfcf7"
+            "date": 1749057322628,
+            "name": "C:\\Users\\malom\\Github\\ba-intermediate-be\\logs\\combined-2025-06-04.log",
+            "hash": "40e1e260f2530aed9d3fb6b86b946c58a46dbb8dd1a57ff68631384af32c81eb"
         }
     ],
     "hashType": "sha256"

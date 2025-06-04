@@ -4,9 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import logger from '@/utils/logger';
 import env from './config/env';
-import ROUTES from './constants/routes';
-import v1Router from './routes/v1';
-import healthCheckHandler from './controllers/healthcheck';
+import router from './routes';
 
 const app = express();
 
@@ -24,6 +22,9 @@ if (env.NODE_ENV === 'production') {
   app.use(morgan('dev'));
 }
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //secure server by setting recommended headers
 app.use(helmet());
 
@@ -33,6 +34,6 @@ app.use(cors());
 //remove default express header
 app.disable('x-powered-by');
 
-app.use(ROUTES.v1, v1Router);
+app.use('/api', router);
 
 export default app;
