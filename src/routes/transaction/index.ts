@@ -18,9 +18,9 @@ router.post('/preview', (req: Request, res: Response) => {
   const amount = Number.parseFloat(result.data?.amount as string);
 
   res.status(200).json({
-    estimatedGas: String(ESTIMATED_GAS),
-    totalAmount: `${ESTIMATED_GAS + amount}${result.data?.token === 'bitcoin' ? 'BTC' : 'ETH'}`,
-    status: 'preview',
+    estimatedGas: `${ESTIMATED_GAS} ${result.data?.token === 'bitcoin' ? 'BTC' : 'ETH'}`,
+    totalAmount: `${ESTIMATED_GAS + amount} ${result.data?.token === 'bitcoin' ? 'BTC' : 'ETH'}`,
+    status: 'Preview',
   });
 });
 
